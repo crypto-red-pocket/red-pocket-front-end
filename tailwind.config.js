@@ -1,3 +1,5 @@
+const plugin = require("tailwindcss/plugin");
+
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
@@ -15,7 +17,10 @@ module.exports = {
         darkRed: "#360000",
         darkViolet: "#1b0033",
       },
+      backgroundImage: {
+        envelopeCard: "url('/src/assets/envelopeBg.png')",
+      },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };
